@@ -1,9 +1,9 @@
 <?php
 
-use App\Http\Controllers\DestinosTuristicosController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ReservasController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DestinoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,12 +19,17 @@ use Illuminate\Support\Facades\Route;
 //sjdbfsdhbvhdbvhfb
 Route::get('/', HomeController::class);
 
-Route::controller(DestinosTuristicosController::class)->group(function(){
-    Route::get('destinosT','indexConsultar');
-    Route::get('destinosT/create', 'createDestino');
-    Route::get('destinosT/editDestino/{destino}', 'editDestino');
-    Route::get('destinosT/eliminarDestino/{destino}', 'showEliminarDestino');
+Route::controller(DestinoController::class)->group(function(){
+    Route::get('destinos/create', 'create')->name('destinos.create');
+    Route::post('destinos/create', 'store')->name('destinos.store');
 
+    Route::get('destinos/edit/{destino}', 'edit')->name('destinos.edit');
+    Route::post('destinos/edit/{destino}', 'update')->name('destinos.update');
+
+    Route::get('destinos/index', 'index')->name('destinos.index');
+    Route::get('destinos/show/{destino}', 'show')->name('destinos.show');
+
+    Route::post('destinos/delete/{destino}', 'destroy')->name('destinos.delete');
 });
 
 Route::controller(ReservasController::class)->group(function(){
