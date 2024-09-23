@@ -1,25 +1,56 @@
-@extends('layouts.plantilla')
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Reserva</title>
+    <link rel="stylesheet" href="{{ asset('css1/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Crear Reserva de Destinos Turísticos</h1>
+        <img src="ruta/a/tu/logo.png" alt="Logo" class="logo"> <!-- Reemplaza con tu imagen -->
+    </header>
 
-@section('title', 'Nueva Reserva')
+    <div class="container">
+        @if(session('exitoso'))
+            <div class="alert success">
+                {{ session('exitoso') }}
+            </div>
+        @endif
 
-@section('content')
-    <h1>Aqui podras hacer una nueva reserva para el turismo</h1>
+        @if ($errors->any())
+            <div class="alert error">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
 
-    <form action="{{ route('reservas.CrearReserva') }}" method="POST">
-        @csrf
-        <div>
-            <label for="nombre">Nombre:</label>
-            <input type="text" name="nombre" id="nombre">
-        </div>
-        <div>
-            <label for="ubicacion">Ubicación:</label>
-            <input type="text" name="ubicacion" id="ubicacion">
-        </div>
-        <div>
-            <label for="descripcion">Descripción:</label>
-            <textarea name="descripcion" id="descripcion"></textarea>
-        </div>
-        <button type="submit">Guardar</button>
-    </form>    
+        <form action="{{ route('reservas.CrearReserva') }}" method="POST">
+            @csrf
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" name="Nombre" id="nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="ubicacion">Ubicación:</label>
+                <input type="text" name="Ubicación" id="ubicacion" required>
+            </div>
+            <div class="form-group">
+                <label for="descripcion">Descripción:</label>
+                <textarea name="Descripción" id="descripcion" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="precio">Precio:</label>
+                <input type="text" name="Precio" id="precio" required>
+            </div>
+            <button type="submit" class="btn">Guardar</button>
+        </form>
+    </div>
+    
+</body>
+</html>
 
-@endsection

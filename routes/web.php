@@ -29,6 +29,8 @@ Route::controller(DestinosTuristicosController::class)->group(function(){
 
 Route::controller(ReservasController::class)->group(function(){
     Route::get('reservas/create', 'createReserva')->name('reservas.create');
+    Route::post('reservas/create', 'CrearReserva')->name('reservas.CrearReserva');
+
     Route::get('reservas/edit/{reserva}', 'editReserva');
     Route::get('reservas/cancelar/{reserva}', 'showCancelar');
     Route::get('reservas/pago', 'showConfirmarPago');

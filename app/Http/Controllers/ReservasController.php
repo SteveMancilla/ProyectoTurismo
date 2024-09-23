@@ -24,15 +24,19 @@ class ReservasController extends Controller
     }
 
     //funciones para insertar datos
-    public function CrearDestino(Request $request){
+    public function CrearReserva(Request $request){
         $request->validate([
-            'Nombre'=>'required',
-            'Descripcion'=>'required',
-            'Ubicacion'=>'required',
-            'Precio'=>'required'
+            'Nombre'=>'required|max:40',
+            'Descripción'=>'required',
+            'Ubicación'=>'required',
+            'Precio'=>'required|numeric',
+        ],[
+            'Nombre.max'=>'El nombre no puede exceder los 40 caracteres',
+            'Precio.numeric'=>'El precio debe ser un número',
+            'Precio.required'=>'El precio es requerido',
         ]);
         Reserva::create($request->all());
-        return redirect()->route('Reservas.createReserva')->with('exitoso', 'Reserva creado con exito');
+        return redirect()->route('reservas.create')->with('exitoso', 'Reserva creado con exito');
     }
 
 }
