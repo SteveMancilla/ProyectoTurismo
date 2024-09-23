@@ -1,0 +1,339 @@
+/* Global styling */
+body {
+    font-family: 'Poppins', sans-serif; /* Cambiar a Poppins */
+    background-color: #e6f7ff; /* Azul claro suave para el fondo */
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Títulos */
+h4 {
+    font-family: 'Poppins', sans-serif; /* Asegúrate de tener Poppins importado */
+    font-weight: 600; /* SemiBold */
+    text-transform: uppercase; /* Mayúsculas */
+    font-size: 24px; /* Tamaño uniforme */
+}
+
+/* Estilos específicos para los títulos */
+.footer-info h4, .footer-contact-form h4 {
+    color: white; /* Color blanco para Contáctenos */
+}
+
+.crear-destino-title {
+    color: #0077b6; /* Color original de Crear destino */
+}
+
+/* Estilo para Déjanos un mensaje */
+.footer-contact-form h4 {
+    color: #0077b6; /* Color igual que Crear destino */
+}
+
+/* Ajustar tamaño */
+h4 {
+    font-size: 24px; /* Tamaño que desees */
+}
+
+/* Form container */
+.form-container {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #f1f8ff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #b3e5fc;
+}
+
+/* Form Title */
+.form-title {
+    font-size: 26px; /* Aumentar tamaño */
+    color: #0077b6; /* Azul oscuro */
+    text-align: center;
+    margin-bottom: 20px; /* Espacio inferior */
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Label styling */
+label {
+    font-size: 16px; /* Aumentar tamaño */
+    color: #0077b6; /* Azul oscuro */
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Input, textarea, and select styling */
+.form-input, .form-textarea, .form-select {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif; /* Añadir Poppins aquí */
+    border: 1px solid #0077b6; /* Borde azul */
+    border-radius: 5px;
+    margin-top: 5px;
+    background-color: #e0f7fa;
+}
+
+/* Button styling */
+.form-button, .footer-button { /* Cambia aquí para incluir ambos */
+    width: 100%;
+    background-color: #0077b6; /* Azul oscuro */
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif; /* Asegúrate de que sea Poppins */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-button:hover, .footer-button:hover {
+    background-color: #005f8d; /* Azul más oscuro al pasar */
+}
+
+/* Footer styles */
+.footer {
+    background-color: #004b6b; /* Azul oscuro */
+    color: white;
+    padding: 40px 20px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.footer-contact-form {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f1f8ff; /* Fondo claro */
+    border-radius: 10px;
+    width: 100%;
+    max-width: 800px;
+}
+
+/* Footer form inputs */
+.footer-input, .footer-textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif; /* Asegúrate de que sea Poppins */
+    border: 1px solid #0077b6;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    background-color: #e0f7fa;
+}
+
+/* Copyright styles */
+.footer-copyright {
+    margin-top: 20px;
+    font-size: 14px;
+    text-align: center;
+    color: white;
+}
+
+.alert {
+    background-color: rgba(255, 215, 0, 0.6); /* Amarillo dorado con 80% de opacidad */
+    color: rgba(0, 0, 0, 0.9);
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    text-align: center;
+    animation: grow 0.5s ease; /* Animación */
+}
+
+@keyframes grow {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        padding: 0 15px;
+    }
+
+    .footer-contact-form {
+        padding: 15px;
+    }
+}
+
+/* Footer form inputs */
+.footer-input, .footer-textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif; /* Asegúrate de que sea Poppins */
+    border: 1px solid #0077b6;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    background-color: #e0f7fa;
+}
+
+/* Container */
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f1f8ff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Page Title */
+.page-title {
+    font-size: 26px;
+    color: #0077b6;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Table Styles */
+.destinos-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.destinos-table th, .destinos-table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #b3e5fc;
+}
+
+.destinos-table th {
+    background-color: #0077b6;
+    color: white;
+    text-transform: uppercase;
+}
+
+/* Button Styles */
+.btn {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+}
+
+.btn-primary {
+    background-color: #0077b6;
+}
+
+.btn-view {
+    background-color: #4caf50; /* Verde */
+}
+
+.btn-edit {
+    background-color: #ff9800; /* Naranja */
+}
+
+.btn-delete {
+    background-color: #f44336; /* Rojo */
+    font-family: 'Poppins', sans-serif; /* Asegúrate de que sea Poppins */
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+/* Container */
+.destination-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f1f8ff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Title */
+.destination-title {
+    font-size: 28px;
+    color: #0077b6;
+    margin-bottom: 15px;
+}
+
+/* Description */
+.destination-description {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Image */
+.destination-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+/* Back Button */
+.btn-back {
+    display: inline-block;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0077b6;
+    color: white;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+.btn-back:hover {
+    opacity: 0.9;
+}
+
+.alert {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+    display: none; /* Ocultar por defecto */
+}
+
+.alert.show {
+    display: block; /* Mostrar cuando se activa */
+}
+
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f8f9fa; /* Color de fondo */
+}
+
+.header-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Espacio entre elementos */
+}
+
+.header-nav li {
+    font-weight: bold; /* Negrita */
+    cursor: default; /* Sin cursor de enlace */
+}
+
+.header-contact p {
+    margin: 0; /* Eliminar márgenes */
+}

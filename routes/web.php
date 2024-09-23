@@ -4,6 +4,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ReservasController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DestinoController;
+use App\Http\Controllers\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,9 +16,10 @@ use App\Http\Controllers\DestinoController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-//steven
-//sjdbfsdhbvhdbvhfb
+
 Route::get('/', HomeController::class);
+
+Route::post('/contact/submit', [ContactController::class, 'submit'])->name('contact.submit');
 
 Route::controller(DestinoController::class)->group(function(){
     Route::get('destinos/create', 'create')->name('destinos.create');
