@@ -32,6 +32,6 @@ Route::controller(ReservasController::class)->group(function(){
     Route::post('reservas/create', 'CrearReserva')->name('reservas.CrearReserva');
 
     Route::get('reservas/edit/{reserva}', 'editReserva');
-    Route::get('reservas/cancelar/{reserva}', 'showCancelar');
-    Route::get('reservas/pago', 'showConfirmarPago');
+    Route::get('reservas/index', 'index');
+    Route::get('reservas/update', 'update');
 });

@@ -12,15 +12,15 @@ class ReservasController extends Controller
     }
 
     public function editReserva($reserva){
-        return view('Reservas.editModificarReserva', compact('reserva'));
+        return view('Reservas.editReserva', compact('reserva'));
     }
 
-    public function showCancelar($reserva){
-        return view('Reservas.showCancelar', compact('reserva'));
+    public function index(){
+        return view('Reservas.indexReservas');
     }
 
-    public function showConfirmarPago(){
-        return view('Reservas.showConfirmarPago');
+    public function update(){
+        return view('Reservas.update');
     }
 
     //funciones para insertar datos

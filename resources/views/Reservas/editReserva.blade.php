@@ -1,4 +1,4 @@
-@extends('layouts.plantilla')
+@extends('layouts.plantillaReserva')
 
 @section('title', 'Editar Reserva' .$reserva)
 

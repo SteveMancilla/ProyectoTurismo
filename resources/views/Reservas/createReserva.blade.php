@@ -8,7 +8,7 @@
 </head>
 <body>
     <header>
-        <h1>Crear Reserva de Destinos Turísticos</h1>
+        <h1>Reserva de Destinos Turísticos</h1>
         <img src="ruta/a/tu/logo.png" alt="Logo" class="logo"> <!-- Reemplaza con tu imagen -->
     </header>
 
@@ -50,7 +50,7 @@
             <button type="submit" class="btn">Guardar</button>
         </form>
     </div>
-    
+
 </body>
 </html>
 
