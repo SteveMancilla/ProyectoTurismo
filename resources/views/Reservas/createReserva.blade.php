@@ -1,15 +1,15 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crear Reserva</title>
+    
     <link rel="stylesheet" href="{{ asset('css1/style.css') }}">
 </head>
 <body>
-    <header>
-        <h1>Reserva de Destinos Turísticos</h1>
-        <img src="ruta/a/tu/logo.png" alt="Logo" class="logo"> <!-- Reemplaza con tu imagen -->
+    <header class="header1">
+        <h1>Reservas de Destinos Turisticos</h1>
     </header>
 
     <div class="container">

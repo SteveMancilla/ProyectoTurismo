@@ -6,10 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>@yield('title')</title>
     <!-- favicon -->
+    <link rel="stylesheet" href="{{ asset('css1/style1.css') }}">
+
     <!-- estilos -->
 </head>
 <body>
     <!-- header -->
+    @yield('header')
     <!-- nav -->
     <!-- content -->
     @yield('content')
