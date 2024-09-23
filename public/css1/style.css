@@ -5,10 +5,15 @@ body {
     padding: 0;
 }
 
-header {
-    background: #35424a;
-    color: #ffffff;
-    padding: 10px 0;
+.header1{
+    min-height: 50vh;
+    background-image: url(img/bg.jpg);
+    background-position: center center;
+    display: flex;
+    background-repeat: no-repeat;
+    align-items: center;
+    background-size: cover;
+    justify-content: center;
     text-align: center;
 }
 
