@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'Crear Destino')
+
 @section('content')
     <h1>Crear Destino</h1>
 

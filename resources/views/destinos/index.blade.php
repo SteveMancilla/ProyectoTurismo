@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'Lista de Destinos')
+
 @section('content')
     <h1>Lista de Destinos</h1>
     <a href="{{ route('destinos.create') }}">Crear nuevo destino</a>

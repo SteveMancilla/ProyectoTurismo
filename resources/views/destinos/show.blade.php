@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'Ver Destino')
+
 @section('content')
     <h1>{{ $destino->nombre }}</h1>
     <p>{{ $destino->descripcion }}</p>
