@@ -42,3 +42,5 @@ Route::controller(ReservasController::class)->group(function(){
     
     Route::get('reservas/update', 'update');
 });
+
+
