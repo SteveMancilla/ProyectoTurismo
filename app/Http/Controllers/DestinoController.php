@@ -34,22 +34,21 @@ class DestinoController extends Controller
     public function store(Request $request)
     {
         $data = $request->validate([
-            'nombre' => 'required|string|max:255',
-            'descripcion' => 'required',
-            'ubicacion' => 'required|string',
-            'precio' => 'required|numeric',
-            'imagen_url' => 'required|string',
+            'nombre' => 'required|string|max:255|regex:/^[\p{L}\s]+$/', // Solo letras y espacios
+            'descripcion' => 'required|string',
+            'ubicacion' => 'required|string|regex:/^[\p{L}\s]+$/', // Solo letras y espacios
+            'precio' => 'required|numeric|min:0.01', // Mayor a 0
+            'imagen_url' => 'required|string|url', // Validar que sea una URL
             'estado' => 'required|boolean',
             'categorias' => 'array',
         ]);
 
         $destino = Destino::create($data);
-        if (isset($data['categorias'])) {
-            $destino->categorias()->attach($data['categorias']);
-        }
 
-        return redirect()->route('destinos.index');
+        return redirect()->route('destinos.index')->with('success', 'Destino creado correctamente.');
     }
+
+
 
 
     /**
