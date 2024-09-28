@@ -40,7 +40,7 @@ Route::controller(ReservasController::class)->group(function(){
 
     Route::get('reservas/edit/{reserva}', 'editReserva');
 
-    Route::get('reservas/index', 'index');
+    Route::get('reservas/index', 'index')->name('reservas.index');
     
     Route::get('reservas/update', 'update');
 });

@@ -12,8 +12,8 @@
         <div class="logo">Destinos Turisticos</div>
         <ul class="menu">
             <li>Inicio</li>
-            <li>Destinos Turisticos</li>
-            <li><a href="#">Reservas</a></li>
+            <li><a href="{{ route('destinos.index') }}">Destinos Turisticos</a></li>
+            <li><a href="{{ route('reservas.index') }}">Reservas</a></li>
             <li>login</li>
         </ul>
 
